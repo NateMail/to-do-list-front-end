@@ -1,0 +1,13 @@
+{{#each items as |item|}}
+  {{log item}}
+  <section data-id="{{item.id}}">
+    <h2>
+      {{item.title}}
+    </h2>
+    <h3>
+      {{item.description}}
+    </h3>
+    <button class="btn btn-danger" data-id="{{item.id}}">Remove</button>
+  </section>
+
+{{/each}}
