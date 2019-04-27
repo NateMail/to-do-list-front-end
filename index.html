@@ -12,6 +12,29 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Nate's To Do List</h1>
+
+  <form id="sign-up" class="signingUp">
+  <input type="email" name="credentials[email]" placeholder="Email">
+  <input type="password" name="credentials[password]" placeholder="Password">
+  <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+  <input class="sub" type="submit" value="Sign Up!">
+</form>
+<br>
+<form id="sign-in" class="signingIn">
+  <input type="email" name="credentials[email]" placeholder="Email" required>
+  <input type="password" name="credentials[password]" placeholder="Password">
+  <input class="sub" type="submit" value="Sign In!">
+</form>
+<br>
+<form id="change-password" class="passwordChange">
+  <input type="password" name="passwords[old]" placeholder="Old Password">
+  <input type="password" name="passwords[new]" placeholder="New Password">
+  <input class="sub" type="submit" value="Changed Password!">
+</form>
+<br>
+<form id="sign-out" class="signingOut">
+  <input class="sub" type="submit" value="Sign Out!">
+</form>
     </body>
 </html>
