@@ -14,4 +14,6 @@ $(() => {
   $('#sign-out').on('submit', auth.onSignOut)
   $('#make_item').on('submit', item.onNewItem)
   $('#show_items').on('click', item.onShowItems)
+  $('#content').on('click', '.btn-danger', item.onItemDestroy)
+  // $('#content').on('click', '.btn-update',  )
 })

@@ -18,7 +18,25 @@ const onShowItems = function () {
     .catch(ui.onGetItemsFailure)
 }
 
+const onUpdateItem = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.UpdateItem(data)
+    .then(ui.onUpdateItemSuccess)
+    .catch(ui.onUpdateItemFailure)
+}
+
+const onItemDestroy = function () {
+  event.preventDefault()
+  const id = $(event.target).data('id')
+  api.destroyItem(id)
+    .then(ui.onDestroyItemSuccess)
+    .catch(ui.onDestroyItemFailure)
+}
 module.exports = {
   onNewItem,
-  onShowItems
+  onShowItems,
+  onUpdateItem,
+  onItemDestroy
 }

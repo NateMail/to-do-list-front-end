@@ -23,7 +23,30 @@ const getItems = function () {
   })
 }
 
+const updateItem = function (data) {
+  return $.ajax({
+    url: config.apiUrl + `/items/${data.item.id}`,
+    method: 'PATCH',
+    headers: {Authorization: 'Token token=' + store.user.token},
+    data: {
+      item: {
+        'title': `${data.item.title}`,
+        'description': `${data.item.description}`
+      }
+    }
+  })
+}
+
+const destroyItem = function (id) {
+  return $.ajax({
+    url: config.apiUrl + `/items/${id}`,
+    method: 'DELETE',
+    headers: {Authorization: 'Token token=' + store.user.token}
+  })
+}
 module.exports = {
   createItem,
-  getItems
+  getItems,
+  updateItem,
+  destroyItem
 }
