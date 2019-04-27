@@ -4,6 +4,7 @@
 // const example = require('./example')
 const auth = require('./auth/events.js')
 const item = require('./items/events.js')
+const modal = require('./modal/events.js')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
@@ -15,5 +16,7 @@ $(() => {
   $('#make_item').on('submit', item.onNewItem)
   $('#show_items').on('click', item.onShowItems)
   $('#content').on('click', '.btn-danger', item.onItemDestroy)
-  // $('#content').on('click', '.btn-update',  )
+  $('#content').on('click', '.btn-update', modal.onUpdateItemModal)
+  $('.close').on('click', modal.onModalClose)
+  $('#update_item').on('submit', item.onUpdateItem)
 })

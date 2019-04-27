@@ -1,1 +1,40 @@
 @import '~bootstrap/scss/bootstrap';
+
+.btn-update {
+  background-color: green;
+  color: white;
+}
+
+.bg-modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.modal-contents {
+  background-color: white;
+  border-radius: 4px;
+  height: 300px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  width: 500px;
+}
+
+.close {
+  color: #333;
+  cursor: pointer;
+  font-size: 42px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  transform: rotate(45deg);
+  &:hover {
+    color: #666;
+  }
+}
