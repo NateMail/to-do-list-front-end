@@ -1,6 +1,6 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
-const modal = require('./../modal/events.js')
+
 const getFormFields = require('./../../../lib/get-form-fields.js')
 
 const onNewItem = function (event) {
@@ -14,16 +14,20 @@ const onNewItem = function (event) {
 
 const onShowItems = function () {
   event.preventDefault()
+  $('.content').show()
   api.getItems()
     .then(ui.onGetItemsSuccess)
     .catch(ui.onGetItemsFailure)
 }
 
-const onUpdateItem = function (event) {
+const onHideItems = function () {
   event.preventDefault()
-  const upId = modal.upI()
-  const data = getFormFields(event.target)
-  console.log(`here is what returns for id ${upId} and here is the object ${data}`)
+  $('.content').hide()
+}
+
+const onUpdateItem = function () {
+  event.preventDefault()
+  const data = $(event.target)
   api.updateItem(data)
     .then(ui.onUpdateItemSuccess)
     .catch(ui.onUpdateItemFailure)
@@ -40,5 +44,6 @@ module.exports = {
   onNewItem,
   onShowItems,
   onUpdateItem,
-  onItemDestroy
+  onItemDestroy,
+  onHideItems
 }

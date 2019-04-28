@@ -37,30 +37,20 @@
   <input class="sub" type="submit" value="Sign Out!">
 </form>
 </nav>
+</div>
       <h1>Nate's To Do List</h1>
-</div>
-<br>
-<form id="make_item">
-  <input type="text" name="item[title]" placeholder="To do title">
-  <input type="text" name="item[description]" placeholder="To do description">
-  <button type="submit">Submit Item</button>
+      <div class="messaging"></div>
+<form id="make_item" class="hidden  shown">
+    <input type="text" name="item[title]" required="required" placeholder="To do title">
+    <input type="text" name="item[description]" required="required" placeholder="To do description">
+    <input type="submit" class="btn btn-primary" value="Create Item">
 </form>
-<br>
-<button id="show_items">List Items</button>
 
-<div class="bg-modal">
-  <div class="modal-content">
-    <div class="close">+</div>
-    <form id="update_item">
-      <input type="text" name="item[title]" placeholder="To do title">
-      <input type="text" name="item[description]" placeholder="To do description">
-      <button type="submit">Submit Item</button>
-    </form>
-  </div>
-</div>
+<button id="show_items" type="button" class="btn btn-success hidden shown">List Items</button>
+<button id="hide_items" type="button" class="btn btn-dark hidden shown">Hide Items</button>
 
 <main>
-  <div id="content" class="content"></div>
+  <div id="content" class="content hidden shown"></div>
 </main>
     </body>
 </html>

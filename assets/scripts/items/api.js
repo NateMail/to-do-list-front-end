@@ -25,7 +25,7 @@ const getItems = function () {
 
 const updateItem = function (data) {
   return $.ajax({
-    url: config.apiUrl + `/items/${data}`,
+    url: config.apiUrl + `/items/${data.item.id}`,
     method: 'PATCH',
     headers: {Authorization: 'Token token=' + store.user.token},
     data: {

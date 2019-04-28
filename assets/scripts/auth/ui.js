@@ -1,44 +1,70 @@
 const store = require('./../store.js')
 
 const signUpSuccess = function (data) {
-  console.log('sign-up worked')
   $('form').trigger('reset')
+  $('.messaging').text('You signed up Successfully!')
+  setTimeout(function () {
+    $('.messaging').text('')
+  }, 2000)
 }
 
 const signUpFailure = function (data) {
-  console.log('sign-up failed')
   $('form').trigger('reset')
+  $('.messaging').text('Sign up failed. Please try again.')
+  setTimeout(function () {
+    $('.messaging').text('')
+  }, 2000)
 }
 
 const signInSuccess = function (data) {
-  console.log('sign-in worked ')
   store.user = data.user
   $('form').trigger('reset')
+  $('.messaging').text('You signed in Successfully!')
+  setTimeout(function () {
+    $('.messaging').text('')
+  }, 2000)
+  $('.shown').removeClass('hidden')
 }
 
 const signInFailure = function (data) {
-  console.log('sign-in failed')
   $('form').trigger('reset')
+  $('.messaging').text('Sign in failed. Please try again.')
+  setTimeout(function () {
+    $('.messaging').text('')
+  }, 2000)
 }
 
 const changePasswordSuccess = function (data) {
-  console.log('password change worked')
   $('form').trigger('reset')
+  $('.messaging').text('You changed your password Successfully!')
+  setTimeout(function () {
+    $('.messaging').text('')
+  }, 2000)
 }
 
 const changePasswordFailure = function (data) {
-  console.log('password failed to change')
   $('form').trigger('reset')
+  $('.messaging').text('Something went wrong please try again.')
+  setTimeout(function () {
+    $('.messaging').text('')
+  }, 2000)
 }
 
 const signOutSuccess = function () {
-  console.log('sign-out worked')
   store.user = null
+  $('.messaging').text('You signed out Successfully!')
+  setTimeout(function () {
+    $('.messaging').text('')
+  }, 2000)
+  $('.shown').addClass('hidden')
 }
 
 const signOutFailure = function () {
-  console.log('sign-out failed')
   $('form').trigger('reset')
+  $('.messaging').text('Sign out failed. Please try again.')
+  setTimeout(function () {
+    $('.messaging').text('')
+  }, 2000)
 }
 
 module.exports = {

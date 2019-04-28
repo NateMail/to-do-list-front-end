@@ -6,6 +6,7 @@ const onCreateItemSuccess = function (data) {
   $('form').trigger('reset')
   store.item = data.item
   console.log(data)
+  $('.content').hide()
 }
 
 const onCreateItemFailure = function (data) {
@@ -28,6 +29,8 @@ const onUpdateItemSuccess = function (data) {
   $('form').trigger('reset')
   store.item = data.item
   console.log(data)
+  const showItemsHtml = showItemsTemplate({ items: data.items })
+  $('.content').html(showItemsHtml)
 }
 
 const onUpdateItemFailure = function (data) {
