@@ -1,3 +1,8 @@
+const upI = function () {
+  const updateId = $(event.target).data('id')
+  return updateId
+}
+
 const onUpdateItemModal = function () {
   document.querySelector('.bg-modal').style.display = 'flex'
 }
@@ -7,5 +12,6 @@ const onModalClose = function () {
 }
 module.exports = {
   onUpdateItemModal,
-  onModalClose
+  onModalClose,
+  upI
 }

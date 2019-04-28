@@ -1,4 +1,4 @@
-{{#each items as |item|}}
+<!--{{#each items as |item|}}
   {{log item}}
   <section data-id="{{item.id}}">
     <h2>
@@ -10,5 +10,18 @@
     <button class="btn btn-danger" data-id="{{item.id}}">Remove</button>
     <button class="btn btn-update" data-id="{{item.id}}">Update Item</button>
   </section>
-
+  original layout
+{{/each}} -->
+{{#each items as |item|}}
+{{log item}}
+<section data-id="{{item.id}}"
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{item.title}}</h5>
+    <p class="card-text">{{item.description}}</p>
+    <button class="btn btn-danger" data-id="{{item.id}}">Remove</button>
+    <button class="btn btn-update" data-id="{{item.id}}">Update Item</button>
+  </div>
+</div>
+</section>
 {{/each}}

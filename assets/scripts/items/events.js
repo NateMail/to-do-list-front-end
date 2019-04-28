@@ -1,5 +1,6 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
+const modal = require('./../modal/events.js')
 const getFormFields = require('./../../../lib/get-form-fields.js')
 
 const onNewItem = function (event) {
@@ -20,9 +21,10 @@ const onShowItems = function () {
 
 const onUpdateItem = function (event) {
   event.preventDefault()
+  const upId = modal.upI()
   const data = getFormFields(event.target)
-  console.log(data)
-  api.UpdateItem(data)
+  console.log(`here is what returns for id ${upId} and here is the object ${data}`)
+  api.updateItem(data)
     .then(ui.onUpdateItemSuccess)
     .catch(ui.onUpdateItemFailure)
 }
