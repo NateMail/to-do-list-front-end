@@ -12,8 +12,12 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <div class="container">
-        <nav>
+
+      <nav class="navbar sticky-top navbar-dark bg-dark">
+      <button id="show_items" type="button" class="btn btn-success hidden shown">List Items</button>
+      <button id="hide_items" type="button" class="btn btn-dark hidden shown">Hide Items</button>
+      </nav>
+
   <form id="sign-up" class="signingUp">
   <input type="email" name="credentials[email]" placeholder="Email">
   <input type="password" name="credentials[password]" placeholder="Password">
@@ -36,18 +40,14 @@
 <form id="sign-out" class="signingOut">
   <input class="sub" type="submit" value="Sign Out!">
 </form>
-</nav>
-</div>
-      <h1>Nate's To Do List</h1>
+
+      <h1>To Do List</h1>
       <div class="messaging"></div>
-<form id="make_item" class="hidden  shown">
+<form id="make_item" class="create hidden  shown">
     <input type="text" name="item[title]" required="required" placeholder="To do title">
     <input type="text" name="item[description]" required="required" placeholder="To do description">
     <input type="submit" class="btn btn-primary" value="Create Item">
 </form>
-
-<button id="show_items" type="button" class="btn btn-success hidden shown">List Items</button>
-<button id="hide_items" type="button" class="btn btn-dark hidden shown">Hide Items</button>
 
 <main>
   <div id="content" class="content hidden shown"></div>

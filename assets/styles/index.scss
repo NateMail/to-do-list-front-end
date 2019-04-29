@@ -1,6 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
 
-
 .messaging {
   color: white;
   text-align: center;
@@ -12,11 +11,17 @@
   color: white;
 }
 
-nav {
+.create {
   text-align: center;
-  display: inline;
-  background-color: black;
-  width: 100%;
+  justify-content: center;
+}
+
+.crossed {
+  text-decoration: line-through;
+}
+
+.content {
+  text-align: center;
 }
 
 body {
@@ -26,6 +31,10 @@ body {
 h1 {
   color: white;
   text-align: center;
+}
+
+h5 {
+  color: black;
 }
 
 .hidden {

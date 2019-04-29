@@ -1,6 +1,5 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
-
 const getFormFields = require('./../../../lib/get-form-fields.js')
 
 const onNewItem = function (event) {
@@ -25,10 +24,17 @@ const onHideItems = function () {
   $('.content').hide()
 }
 
-const onUpdateItem = function () {
+const onDone = function () {
   event.preventDefault()
-  const data = $(event.target)
-  api.updateItem(data)
+  $('.card-title').toggleClass('crossed')
+  $('.card-text').toggleClass('crossed')
+}
+
+const onEditItem = function (event) {
+  event.preventDefault()
+  const id = $(event.target).data('id')
+  const data = getFormFields(event.target)
+  api.updateItem(id, data)
     .then(ui.onUpdateItemSuccess)
     .catch(ui.onUpdateItemFailure)
 }
@@ -43,7 +49,8 @@ const onItemDestroy = function () {
 module.exports = {
   onNewItem,
   onShowItems,
-  onUpdateItem,
+  onEditItem,
   onItemDestroy,
-  onHideItems
+  onHideItems,
+  onDone
 }

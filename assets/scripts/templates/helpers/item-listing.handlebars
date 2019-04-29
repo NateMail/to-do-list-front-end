@@ -4,8 +4,9 @@
 <div class="card-group">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">{{item.title}}</h5>
+      <h4 class="card-title">{{item.title}}</h4>
       <p class="card-text">{{item.description}}</p>
+      <button class="btn btn-success" data-id="{{item.id}}">Done</button>
       <button class="btn btn-danger" data-id="{{item.id}}">Remove</button>
       <!-- this opens a modal for editing each item -->
       <button type="button" class="btn btn-primary edit-item" data-toggle="modal" data-target="#edit-item">
@@ -14,8 +15,8 @@
 
       <!-- Edit Item form within a modal-->
 
-      <div class="modal fade" id="edit-item" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+<div class="modal fade" id="edit-item" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Edit Item</h5>
@@ -23,21 +24,22 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
+
               <div class="modal-body">
-
-                <form class="edit-item-form" data-id="{{item.id}}">
+                <form class="edit-item-form">
                     <div class="edit-item-message"></div>
-                    <input type="text" class="form-control" name="title" placeholder="Item Title">
-                    <input type="text" class="form-control" name="description" placeholder="Item Description">
-                    <input type="submit" class="btn btn-primary edit-item-button" value="Edit Item">
+                    <input type="text" class="form-control" name="item[title]" required="required" placeholder="Item Title">
+                    <input type="text" class="form-control" name="item[description]" required="required" placeholder="Item Description">
+                    <input type="submit" class="btn btn-info edit-item-button" value="Edit Item">
                 </form>
-
               </div>
+
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
+
             </div>
-          </div>
-        </div>
+      </div>
+  </div>
 </section>
 {{/each}}
