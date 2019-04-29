@@ -32,7 +32,6 @@ const onDone = function () {
 
 const onEditItem = function (event) {
   event.preventDefault()
-  $('.fade').hide()
   const id = $(event.target).data('id')
   const data = getFormFields(event.target)
   console.log(`This is the id ${id}`)
