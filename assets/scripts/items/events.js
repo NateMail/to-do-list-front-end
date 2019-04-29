@@ -34,7 +34,9 @@ const onEditItem = function (event) {
   event.preventDefault()
   const id = $(event.target).data('id')
   const data = getFormFields(event.target)
-  api.updateItem(id, data)
+  console.log(`This is the id ${id}`)
+  console.log(`This is the data  ${data}`)
+  api.updateItem(data, id)
     .then(ui.onUpdateItemSuccess)
     .catch(ui.onUpdateItemFailure)
 }

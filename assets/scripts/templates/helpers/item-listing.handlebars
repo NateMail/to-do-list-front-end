@@ -9,13 +9,13 @@
       <button class="btn btn-success" data-id="{{item.id}}">Done</button>
       <button class="btn btn-danger" data-id="{{item.id}}">Remove</button>
       <!-- this opens a modal for editing each item -->
-      <button type="button" class="btn btn-primary edit-item" data-toggle="modal" data-target="#edit-item">
+      <button type="button" class="btn btn-primary edit-item" data-toggle="modal" data-target="#edit-item-{{item.id}}">
         Update Item
       </button>
 
       <!-- Edit Item form within a modal-->
 
-<div class="modal fade" id="edit-item" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="edit-item-{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -26,11 +26,11 @@
               </div>
 
               <div class="modal-body">
-                <form class="edit-item-form">
+                <form class="form-control edit-item-form update-form" data-id="{{item.id}}">
                     <div class="edit-item-message"></div>
-                    <input type="text" class="form-control" name="item[title]" required="required" placeholder="Item Title">
-                    <input type="text" class="form-control" name="item[description]" required="required" placeholder="Item Description">
-                    <input type="submit" class="btn btn-info edit-item-button" value="Edit Item">
+                    <input type="text" name="item[title]" required="required" placeholder="Item Title">
+                    <input type="text" name="item[description]" required="required" placeholder="Item Description">
+                    <button type="submit" class="btn btn-info edit-item-button">Edit Item</button>
                 </form>
               </div>
 

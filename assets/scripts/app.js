@@ -18,5 +18,5 @@ $(() => {
   $('#hide_items').on('click', item.onHideItems)
   $('#content').on('click', '.btn-danger', item.onItemDestroy)
   $('#content').on('click', '.btn-success', item.onDone)
-  $('#update-form').on('submit', item.onEditItem)
+  $('#content').on('submit', '.update-form', item.onEditItem)
 })
