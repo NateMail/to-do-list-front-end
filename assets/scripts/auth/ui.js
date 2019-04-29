@@ -3,6 +3,7 @@ const store = require('./../store.js')
 const signUpSuccess = function (data) {
   $('form').trigger('reset')
   $('.messaging').text('You signed up Successfully!')
+  $('.signingUp').addClass('hiding')
   setTimeout(function () {
     $('.messaging').text('')
   }, 2000)
@@ -20,6 +21,13 @@ const signInSuccess = function (data) {
   store.user = data.user
   $('form').trigger('reset')
   $('.messaging').text('You signed in Successfully!')
+  $('.signingIn').addClass('hiding')
+  $('.signingUp').addClass('hiding')
+  $('#sign-up-nav-button').hide()
+  $('#sign-in-nav-button').hide()
+  $('.change-password-nav-button').removeClass('hidden')
+  $('#change-password-nav-button').show()
+  $('.signOut').removeClass('hiding')
   setTimeout(function () {
     $('.messaging').text('')
   }, 2000)
@@ -36,6 +44,7 @@ const signInFailure = function (data) {
 
 const changePasswordSuccess = function (data) {
   $('form').trigger('reset')
+  $('.passwordChange').addClass('hiding')
   $('.messaging').text('You changed your password Successfully!')
   setTimeout(function () {
     $('.messaging').text('')
@@ -53,6 +62,12 @@ const changePasswordFailure = function (data) {
 const signOutSuccess = function () {
   store.user = null
   $('.messaging').text('You signed out Successfully!')
+  $('#sign-up-nav-button').show()
+  $('#sign-in-nav-button').show()
+  $('.passwordChange').addClass('hiding')
+  $('#change-password-nav-button').hide()
+  $('.signOut').addClass('hiding')
+  $('#content').empty()
   setTimeout(function () {
     $('.messaging').text('')
   }, 2000)

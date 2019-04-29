@@ -4,7 +4,7 @@
 // const example = require('./example')
 const auth = require('./auth/events.js')
 const item = require('./items/events.js')
-
+const nav = require('./nav/events.js')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
@@ -19,4 +19,7 @@ $(() => {
   $('#content').on('click', '.btn-danger', item.onItemDestroy)
   $('#content').on('click', '.btn-success', item.onDone)
   $('#content').on('submit', '.update-form', item.onEditItem)
+  $('#sign-up-nav-button').on('click', nav.onNavSignUp)
+  $('#sign-in-nav-button').on('click', nav.onNavSignIn)
+  $('#change-password-nav-button').on('click', nav.onNavChangePass)
 })
