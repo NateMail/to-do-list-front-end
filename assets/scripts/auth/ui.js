@@ -5,6 +5,7 @@ const signUpSuccess = function (data) {
   $('.messaging').text('You signed up Successfully!')
   $('.signing-up').addClass('hiding')
   $('.signing-in').removeClass('hiding')
+  $('#sign-in-nav-button').hide()
   setTimeout(function () {
     $('.messaging').text('')
   }, 2000)

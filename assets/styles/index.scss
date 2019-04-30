@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Abhaya+Libre');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
 body {
   background-image: url('public/wood.jpg');
@@ -17,6 +18,13 @@ h5 {
   color: $black;
 }
 
+footer {
+  color: $white;
+  font-family: 'Dancing Script', cursive, serif;
+  font-size: 24px;
+  text-align: center;
+}
+
 .messaging {
   align-self: center;
   color: $white;
@@ -32,6 +40,7 @@ h5 {
 
 .card-body {
   color: $white;
+  background-color: rgba(0, 0, 0, .1);
 }
 
 .create {
@@ -53,7 +62,13 @@ h5 {
   }
 
 .navbar {
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.modal-content {
+  background-image: url('public/light.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .signing-up,
