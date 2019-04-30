@@ -21,6 +21,12 @@ const onCreateItemFailure = function (data) {
 const onGetItemsSuccess = function (data) {
   const showItemsHtml = showItemsTemplate({ items: data.items })
   $('.content').html(showItemsHtml)
+  if (data.items.length === 0) {
+    $('.messaging').text('Add an item to the list!')
+    setTimeout(function () {
+      $('.messaging').text('')
+    }, 2000)
+  }
 }
 
 const onGetItemsFailure = function (data) {
@@ -33,7 +39,7 @@ const onGetItemsFailure = function (data) {
 const onUpdateItemSuccess = function (data) {
   $('form').trigger('reset')
   store.item = data.item
-  $('.messaging').text('Item was updated check the bottom of your list!')
+  $('.messaging').text('Item was updated check your list!')
   setTimeout(function () {
     $('.messaging').text('')
   }, 2000)
