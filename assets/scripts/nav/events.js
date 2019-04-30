@@ -1,16 +1,16 @@
 
 const onNavSignUp = function () {
-  $('.signingUp').removeClass('hiding')
+  $('.signing-up').removeClass('hiding')
 }
 
 const onNavSignIn = function () {
   event.preventDefault()
-  $('.signingIn').removeClass('hiding')
+  $('.signing-in').removeClass('hiding')
 }
 
 const onNavChangePass = function () {
   event.preventDefault()
-  $('.passwordChange').removeClass('hiding')
+  $('.password-change').removeClass('hiding')
 }
 
 module.exports = {

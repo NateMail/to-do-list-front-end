@@ -17,7 +17,6 @@ $(() => {
   $('#show_items').on('click', item.onShowItems)
   $('#hide_items').on('click', item.onHideItems)
   $('#content').on('click', '.btn-danger', item.onItemDestroy)
-  $('#content').on('click', '.btn-success', item.onDone)
   $('#content').on('submit', '.update-form', item.onEditItem)
   $('#sign-up-nav-button').on('click', nav.onNavSignUp)
   $('#sign-in-nav-button').on('click', nav.onNavSignIn)

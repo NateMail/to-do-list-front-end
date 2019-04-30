@@ -23,12 +23,6 @@ const onHideItems = function () {
   $('.content').hide()
 }
 
-const onDone = function () {
-  event.preventDefault()
-  $('.card-title').toggleClass('crossed')
-  $('.card-text').toggleClass('crossed')
-}
-
 const onEditItem = function (event) {
   event.preventDefault()
   $('.modal-open').removeClass()
@@ -52,6 +46,5 @@ module.exports = {
   onShowItems,
   onEditItem,
   onItemDestroy,
-  onHideItems,
-  onDone
+  onHideItems
 }
