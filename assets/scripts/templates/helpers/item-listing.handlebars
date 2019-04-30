@@ -1,5 +1,7 @@
 {{#each items as |item|}}
+<div class="grid-container">
 <section data-id="{{item.id}}">
+  <div class
 <div class="card-group">
   <div class="card">
     <div class="card-body">
@@ -11,7 +13,9 @@
       <button type="button" class="btn btn-primary edit-item" data-toggle="modal" data-target="#edit-item-{{item.id}}">
         Update Item
       </button>
-
+    </div>
+  </div>
+</div>
       <!-- Edit Item form within a modal -->
 
 <div class="modal fade" id="edit-item-{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -38,5 +42,7 @@
               </div>
       </div>
   </div>
+</div>
 </section>
+</div>
 {{/each}}

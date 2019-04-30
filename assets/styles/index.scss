@@ -24,8 +24,10 @@ h5 {
 }
 
 .card {
+  align-content: space-between;
   background: transparent;
-  border: transparent;
+  border: solid 3px black;
+  margin: 2px;
 }
 
 .card-body {
@@ -43,6 +45,12 @@ h5 {
 
 .hiding {
   display: none;
+}
+
+.grid-container {
+  display: inline-grid;
+  grid-template: auto auto auto;
+
 }
 
 .navbar {
