@@ -9,29 +9,29 @@ body {
 }
 
 h1 {
-  color: #fff;
+  color: $white;
   text-align: center;
 }
 
 h5 {
-  color: #000;
+  color: $black;
 }
 
 .messaging {
   align-self: center;
-  color: #fff;
+  color: $white;
   text-align: center;
 }
 
 .card {
   align-content: space-between;
   background: transparent;
-  border: solid 3px black;
+  border: solid 3px $black;
   margin: 2px;
 }
 
 .card-body {
-  color: #fff;
+  color: $white;
 }
 
 .create {
@@ -50,8 +50,7 @@ h5 {
 .grid-container {
   display: inline-grid;
   grid-template: auto auto auto;
-
-}
+  }
 
 .navbar {
   background-color: rgba(0, 0, 0, .6);
