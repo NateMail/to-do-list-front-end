@@ -1,9 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Abhaya+Libre');
 
 body {
   background-image: url('public/wood.jpg');
   background-repeat: repeat-y;
   background-size: cover;
+  font-family: 'Abhaya Libre', serif;
 }
 
 h1 {
