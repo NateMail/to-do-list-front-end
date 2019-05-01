@@ -5,6 +5,10 @@ This is my version of a to-do list.
 USED IN THIS PROJECT:
 HTML5, SCSS, Handlebars, Javascript, JQUERY, JSON, AJAX, Bootstrap
 
+WHAT THIS APP DOES:
+This application is a to-do list.  You can create, update, delete and see items
+that you add to your own list.
+
 CHALLENGES:
 When I first started working on this project I didn't forsee a lot of the small
 problems I was going to have.  One of the biggest challenges I had was in the
@@ -29,4 +33,8 @@ User should be able to sign out.
 User should be able to create a list item.
 User should be able to see their list.
 User should be able to update items.
-User should be able to delete items.  
+User should be able to delete items.
+
+LINKS TO BACK END:
+REPO: https://github.com/NateMail/to_do_list_api
+HEROKU: https://nates-to-do-list.herokuapp.com/
